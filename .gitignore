@@ -1,0 +1,8 @@
+# Ignorar binarios compilados de Java
+*.class
+
+# Ignorar archivos temporales y carpetas de IDEs (por si acaso usas VSCode/IntelliJ)
+.vscode/
+.idea/
+*.swp
+.DS_Store
