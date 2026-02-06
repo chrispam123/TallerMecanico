@@ -27,14 +27,12 @@ public class Vehiculo {
     public void setModelo(String nuevoModelo) {
         this.modelo = nuevoModelo;
     }
-    //metodo toString
+    //metodo toString IMPORTANTE PARA MOSTRAR LOS DATOS DE LOS OBJETOS Y NO DIRECCON DE MEMORIA
+    
     @Override
     public String toString() {
-        return "Vehiculo{" +
-                "placa='" + placa + '\'' +
-                ", marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                '}';
+        return "Placa: " + placa + ", Marca: " + marca + ", Modelo: " + modelo;
+               
 
 
     }
