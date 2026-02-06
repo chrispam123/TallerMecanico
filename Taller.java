@@ -1,4 +1,8 @@
 import java.util.ArrayList; // incialiazmos el arraylist para guardar los autos
+import java.io.FileWriter; // importamos la clase FileWriter para escribir en el archivo
+import java.io.IOException; // importamos la clase IOException para manejar las excepciones de entrada/s  try catch
+
+
 public class Taller{
     
     private ArrayList<Vehiculo>inventario; // creamos el arraylist inventario de tipo vehiculo
@@ -33,4 +37,18 @@ public class Taller{
             System.out.println(v);
         }
      }
+
+    //metodo para guardar el inventario en un archivo de texto
+     public void guardarInventario() {
+        try (FileWriter escritor = new FileWriter("taller.txt",false)) { // creamos un nuevo archivo de texto llamado inventario.txt y lo abrimos en modo de escritura (sobrescribe el archivo si ya existe)
+            for (Vehiculo v : inventario) {//recorremos el inventario de vehiculos
+                escritor.write(v.toCSV() + "\n"); // escribimos cada vehiculo en el archivo en formato csv
+            }
+            System.out.println("Inventario guardado en taller.txt");
+        } catch (IOException e) {
+            System.out.println("Error al guardar el inventario: " + e.getMessage());
+        }
+     }
+
+
 }

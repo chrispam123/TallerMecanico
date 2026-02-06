@@ -36,4 +36,9 @@ public class Vehiculo {
 
 
     }
+
+    //nuevo formato para mostrar los datos del vehiculo csv
+    public String toCSV() {
+        return placa + "," + marca + "," + modelo;
+    }   
 }

@@ -1,0 +1,3 @@
+ABC123,Toyota,Corolla
+DEF456,Honda,Civic
+GHI789,Ford,Focus
